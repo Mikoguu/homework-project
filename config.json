@@ -1,0 +1,14 @@
+{
+    "mail": {
+      "subject": "Сообщение с сайта",
+      "smtp": {
+        "host": "smtp.ethereal.email",
+        "port": 587,
+        "secure": false,
+        "auth": {
+          "user": "brenda.leffler82@ethereal.email",
+          "pass": "S9xk6pHeJqESBGPfuE"
+        }
+      }
+    }
+   }
