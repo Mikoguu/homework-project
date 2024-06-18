@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
     fs.readFile(pathToData, 'utf8', (error, data) => {
       if (!error) {
         const parsedData = JSON.parse(data);
-
         res.render('pages/admin', { title: 'Admin page', skills: parsedData.skills });
       }
     });
@@ -38,7 +37,7 @@ router.post('/skills', (req, res) => {
 
           return;
         }
-
+        res.json({msg: 'Данные успешно обновлены', status: 'Ok'})
         res.render('pages/admin', { title: 'Admin page', skills: parsedData.skills });
       });
     }
@@ -81,7 +80,6 @@ router.post('/upload', (req, res) => {
           });
       });
   });
-
   res.redirect('/admin');
 });
 

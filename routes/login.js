@@ -16,7 +16,6 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
   if (req.body.email === process.env.LOGIN && req.body.password === process.env.PASSWORD) {
     req.session.isLoggedIn = true;
-
     res.redirect('/admin');
   } else {
     res.render('pages/login', { showError: true })
@@ -24,3 +23,4 @@ router.post('/', (req, res, next) => {
 });
 
 module.exports = router;
+
